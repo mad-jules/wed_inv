@@ -1,6 +1,6 @@
 "use client";
 import HeroSection from "../components/HeroSection";
-import GuestsSection from "../components/GuestsSection";
+// import GuestsSection from "../components/GuestsSection";
 import styles from "./page.module.css";
 import { locations } from "@/constants/locations";
 import dynamic from "next/dynamic";
@@ -15,13 +15,13 @@ export default function HomePage() {
       <section id="hero" className={styles.section} style={{ padding: 0 }}>
         <HeroSection />
       </section>
-      <section
+      {/* <section
         id="guests"
         className={styles.section}
         style={{ height: "auto" }}
       >
         <GuestsSection />
-      </section>
+      </section> */}
       <section id="locations" className={styles.section}>
         <LocationSection locations={locations} />
       </section>

@@ -7,13 +7,6 @@ import { WEDDING_DATE, WEDDING_DATE_FORMATTED } from "@/constants/wedding";
 export default function HeroSection() {
   const { days, hours, minutes, seconds } = useCountdown(WEDDING_DATE);
 
-  const scrollToGuests = () => {
-    document.getElementById("guests")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
-
   return (
     <div className={styles.hero}>
       <div className={styles.background} />
@@ -27,25 +20,22 @@ export default function HeroSection() {
         <p className={styles.date}>{WEDDING_DATE_FORMATTED}</p>
         <div className={styles.timer}>
           <div>
-            <span>{days}</span>
+            <span>{days.toString().padStart(2, "0")}</span>
             <small>днів</small>
           </div>
           <div>
-            <span>{hours}</span>
+            <span>{hours.toString().padStart(2, "0")}</span>
             <small>год</small>
           </div>
           <div>
-            <span>{minutes}</span>
+            <span>{minutes.toString().padStart(2, "0")}</span>
             <small>хв</small>
           </div>
-          {/* <div>
-            <span>{seconds}</span>
+          <div>
+            <span>{seconds.toString().padStart(2, "0")}</span>
             <small>сек</small>
-          </div> */}
+          </div>
         </div>
-        <button onClick={scrollToGuests} className={styles.button}>
-          Переглянути гостей
-        </button>
       </div>
     </div>
   );

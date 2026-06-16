@@ -1,0 +1,39 @@
+.step {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 20px;
+}
+
+.bubble {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-size: 2rem;
+  white-space: pre-line;
+}
+
+.bubble-text {
+  width: 300px;
+  margin: auto;
+  background-color: #fceee1;
+  border-radius: 12px;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/assets/bg-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: scale(1.05);
+}

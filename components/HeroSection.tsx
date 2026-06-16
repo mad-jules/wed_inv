@@ -12,10 +12,10 @@ export default function HeroSection() {
       <div className={styles.background} />
       <div className={styles.overlay} />
       <div className={styles.content}>
-        <p className={styles.subtitle}>Весільне запрошення</p>
-        <h1 className={styles.title}>Юлія & Максим</h1>
+        {/* <p className={styles.subtitle}>Весільне запрошення</p> */}
+        {/* <h1 className={styles.title} style={{whiteSpace: 'nowrap'}}>{`Юля і Максим`}</h1> */}
         <p className={styles.description}>
-          Ми будемо раді відсвяткувати наш особливий день разом з вами.
+          {`Будемо дуже раді розділити цей особливий день разом із вами. Запрошуємо на наше весілля! ❤️`}
         </p>
         <p className={styles.date}>{WEDDING_DATE_FORMATTED}</p>
         <div className={styles.timer}>

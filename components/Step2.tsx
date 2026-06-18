@@ -1,6 +1,9 @@
 "use client";
 
 import styles from "./Step1.module.css";
+import s2 from "../assets/s-2.png";
+import Image from "next/image";
+import { Icon, IconName } from "./Icon";
 
 export default function Step2() {
   return (
@@ -11,15 +14,21 @@ export default function Step2() {
           backgroundImage: 'url("/assets/bg-2.png")',
         }}
       />
-      <div className={styles.bubble} style={{ right: 0 }}>
-        <p className={styles["bubble-text"]} style={{ marginBottom: 24 }}>
-          {`Яка?
-          Ти з'їжджаєш? 👀`}
+      <div className={styles.bubble} style={{}}>
+        <Image
+          alt="bax"
+          src={s2}
+          priority
+          style={{ width: "100%", height: "auto", objectFit: "contain" }}
+        />
+        <p className={styles["bubble-text"]} style={{}}>
+          {`Га? 👀`}
         </p>
-        <img
-          src={"/assets/s-2.png"}
-          alt={"name"}
-          style={{ width: "100%", aspectRatio: 480 / 523 }}
+        <Icon
+          className={styles["animated-arrow"]}
+          iconName={IconName.DownArrowAlt}
+          width={30}
+          height={30}
         />
       </div>
     </div>

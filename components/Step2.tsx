@@ -8,12 +8,9 @@ import { Icon, IconName } from "./Icon";
 export default function Step2() {
   return (
     <div className={styles.step}>
-      <div
-        className={styles.background}
-        style={{
-          backgroundImage: 'url("/assets/bg-2.png")',
-        }}
-      />
+      <div className={styles.background} />
+      <div className={styles.overlay} />
+
       <div className={styles.bubble} style={{}}>
         <Image
           alt="bax"
@@ -21,9 +18,12 @@ export default function Step2() {
           priority
           style={{ width: "100%", height: "auto", objectFit: "contain" }}
         />
-        <p className={styles["bubble-text"]} style={{}}>
-          {`Га? 👀`}
-        </p>
+        <div className={styles["text-wrapper"]}>
+          <p className={styles["bubble-text"]} style={{}}>
+            {/* {`Га? 👀`} */}
+            {`Не тягніть за хвіст!`}
+          </p>
+        </div>
         <Icon
           className={styles["animated-arrow"]}
           iconName={IconName.DownArrowAlt}

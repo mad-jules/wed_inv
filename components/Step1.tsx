@@ -12,6 +12,8 @@ export default function Step1() {
   return (
     <div className={styles.step}>
       <div className={styles.background} />
+      <div className={styles.overlay} />
+
       <div className={styles.bubble}>
         <Image
           src={s1}
@@ -22,10 +24,12 @@ export default function Step1() {
           placeholder="empty"
           style={{ position: "relative", left: 24 }}
         />
-        <p className={styles["bubble-text"]}>
-          {`Усім привіт! 🐾
+        <div className={styles["text-wrapper"]}>
+          <p className={styles["bubble-text"]} style={{ top: "44%" }}>
+            {`Усім привіт! 🐾
           Мене звати Фібі, і у моїх хазяїнів є для вас чудова новина!`}
-        </p>
+          </p>
+        </div>
         <Icon
           className={styles["animated-arrow"]}
           iconName={IconName.DownArrowAlt}

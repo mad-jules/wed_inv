@@ -18,7 +18,7 @@ export default function HeroSection() {
           {`Будемо дуже раді розділити цей особливий день разом із вами. Запрошуємо на наше весілля! ❤️`}
         </p>
         <p className={styles.date}>{WEDDING_DATE_FORMATTED}</p>
-        <div className={styles.timer}>
+        {/* <div className={styles.timer}>
           <div>
             <span>{days.toString().padStart(2, "0")}</span>
             <small>днів</small>
@@ -35,7 +35,7 @@ export default function HeroSection() {
             <span>{seconds.toString().padStart(2, "0")}</span>
             <small>сек</small>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ import { locations } from "@/constants/locations";
 import dynamic from "next/dynamic";
 import Step2 from "@/components/Step2";
 import Step3 from "@/components/Step3";
+import Step4 from "@/components/Step4";
 
 const LocationSection = dynamic(() => import("@/components/LocationSection"), {
   ssr: false,
@@ -22,11 +23,14 @@ export default function HomePage() {
       <section id="step-2" className={styles.section} style={{ padding: 0 }}>
         <Step2 />
       </section>
-      <section id="hero" className={styles.section} style={{ padding: 0 }}>
+      <section id="step-3" className={styles.section} style={{ padding: 0 }}>
         <Step3 />
       </section>
       <section id="hero" className={styles.section} style={{ padding: 0 }}>
         <HeroSection />
+      </section>
+      <section id="step-4" className={styles.section} style={{ padding: 0 }}>
+        <Step4 />
       </section>
       {/* <section
         id="guests"

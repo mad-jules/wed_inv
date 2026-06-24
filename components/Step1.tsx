@@ -6,8 +6,8 @@ import { Icon, IconName } from "./Icon";
 import s1 from "../assets/s-1.png";
 
 export default function Step1() {
-  const imageWidth = 640;
-  const imageHeight = 440;
+  const imageWidth = 590;
+  const imageHeight = 400;
 
   return (
     <div className={styles.step}>

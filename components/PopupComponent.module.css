@@ -20,14 +20,14 @@
 }
 
 .icon {
-  width: 20px;
-  font-weight: 600;
+  /* width: 20px; */
+  /* font-weight: 600; */
 }
 
 .actions {
   display: flex;
   gap: 12px;
-  margin-top: 16px;
+  /* margin-top: 16px; */
 }
 
 .button {

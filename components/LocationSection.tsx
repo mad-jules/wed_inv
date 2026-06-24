@@ -37,7 +37,7 @@ export default function LocationSection({ locations }: Props) {
     <div className={styles.wrapper}>
       <MapContainer
         center={[center.lat, center.lng]}
-        zoom={13}
+        zoom={12}
         className={styles.map}
         scrollWheelZoom={true}
       >

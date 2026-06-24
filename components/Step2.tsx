@@ -16,7 +16,13 @@ export default function Step2() {
           alt="bax"
           src={s2}
           priority
-          style={{ width: "100%", height: "auto", objectFit: "contain" }}
+          style={{
+            width: "100%",
+            height: "auto",
+            objectFit: "contain",
+            position: "relative",
+            top: "-2%",
+          }}
         />
         <div className={styles["text-wrapper"]}>
           <p className={styles["bubble-text"]} style={{}}>
@@ -25,6 +31,7 @@ export default function Step2() {
           </p>
         </div>
         <Icon
+          style={{ position: "absolute", bottom: 0 }}
           className={styles["animated-arrow"]}
           iconName={IconName.DownArrowAlt}
           width={30}

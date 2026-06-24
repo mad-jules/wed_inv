@@ -6,6 +6,7 @@ import heroStyles from "./HeroSection.module.css";
 import final from "../assets/final.png";
 import { useCountdown } from "@/hooks/useCountdown";
 import { WEDDING_DATE } from "@/constants/wedding";
+import { Icon, IconName } from "./Icon";
 
 export default function Step4() {
   const { days, hours, minutes, seconds } = useCountdown(WEDDING_DATE);
@@ -18,39 +19,67 @@ export default function Step4() {
         //   backgroundImage: 'url("/assets/bg-3.png")',
         // }}
       />
-      <div className={styles.overlay} />
+      <div className={styles["dark-overlay"]} />
 
-      <div className={styles.bubble} style={{ justifyContent: "end", gap: 50 }}>
+      <div className={styles.bubble} style={{ justifyContent: "end", gap: 0 }}>
         <div
           style={{
             backgroundColor: "#ffdfea",
             borderRadius: 16,
+            padding: 8,
           }}
         >
           {/* <div className={styles["text-wrapper"]} style={{ top: "10%", backgroundImage:'none' }}> */}
           <p
             className={styles["bubble-text"]}
             style={{
-              padding: 8,
+              // padding: 8,
+              margin: "auto",
               position: "static",
               transform: "translate(0, 0)",
             }}
           >{`Чекаємо вас на святкування через:`}</p>
           {/* </div> */}
-          <div className={heroStyles.timer}>
-            <div>
+          <div
+            className={heroStyles.timer}
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(4, 1fr)",
+            }}
+          >
+            <div
+              style={{
+                // boxShadow: 'rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px',
+                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+              }}
+            >
               <span>{days.toString().padStart(2, "0")}</span>
               <small>днів</small>
             </div>
-            <div>
+            <div
+              style={{
+                // boxShadow: 'rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px',
+                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+              }}
+            >
               <span>{hours.toString().padStart(2, "0")}</span>
               <small>год</small>
             </div>
-            <div>
+            <div
+              style={{
+                // boxShadow: 'rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px',
+                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+              }}
+            >
               <span>{minutes.toString().padStart(2, "0")}</span>
               <small>хв</small>
             </div>
-            <div>
+            <div
+              style={{
+                // boxShadow: 'rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px',
+                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+              }}
+            >
               <span>{seconds.toString().padStart(2, "0")}</span>
               <small>сек</small>
             </div>
@@ -59,8 +88,20 @@ export default function Step4() {
         <Image
           src={final}
           alt="we"
-          style={{ width: "100%", height: "auto", objectFit: "contain" }}
+          style={{
+            width: "100dvw",
+            height: "auto",
+            objectFit: "contain",
+            objectPosition: "left",
+          }}
           priority
+        />
+        <Icon
+          style={{ position: "absolute", color: "white" }}
+          className={styles["animated-arrow"]}
+          iconName={IconName.DownArrowAlt}
+          width={30}
+          height={30}
         />
       </div>
     </div>

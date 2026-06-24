@@ -23,7 +23,7 @@ export default function PopupComponent({ lat, lng, name, address }: Location) {
         <Icon
           iconName={IconName.Map}
           className={css["icon"]}
-          style={{ width: 32, height: 32 }}
+          style={{ width: 24, height: 24 }}
         />
         <div className={css["address"]}>{address}</div>
       </div>

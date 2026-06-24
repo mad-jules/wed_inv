@@ -1,41 +1,3 @@
-// import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
-// import styles from "./layout.module.css";
-// import "./globals.css";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
-// export const metadata: Metadata = {
-//   title: "Wedding Invitation",
-//   description: "Yuliia & Maksym Wedding Website",
-// };
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="uk" className={`${geistSans.variable} ${geistMono.variable}`}>
-//       <head>
-//         <meta
-//           name="viewport"
-//           content="width=device-width, initial-scale=1, viewport-fit=cover"
-//         />
-//       </head>
-//       <body className={styles.body}>{children}</body>
-//     </html>
-//   );
-// }
-
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import styles from "./layout.module.css";
@@ -46,10 +8,35 @@ const comicSans = localFont({
   variable: "--font-comic-sans",
   display: "swap",
 });
-
 export const metadata: Metadata = {
+  // metadataBase: new URL("https://your-domain.com"),
+
   title: "Wedding Invitation",
   description: "Yuliia & Maksym Wedding Website",
+
+  openGraph: {
+    title: "Yuliia & Maksym Wedding",
+    description: "We invite you to celebrate our wedding with us ❤️",
+    url: "https://your-domain.com",
+    siteName: "Yuliia & Maksym Wedding",
+    locale: "uk_UA",
+    type: "website",
+    // images: [
+    //   {
+    //     url: "/og-image.jpg",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Yuliia & Maksym Wedding",
+    //   },
+    // ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Yuliia & Maksym Wedding",
+    description: "We invite you to celebrate our wedding with us ❤️",
+    // images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -64,6 +51,9 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
+        <meta property="og:title" content="Yuliia & Maksym Wedding" />
+        <meta property="og:description" content="Wedding Invitation" />
+        {/* <meta property="og:image" content="https://your-domain.com/og-image.jpg" /> */}
       </head>
       <body className={styles.body}>{children}</body>
     </html>

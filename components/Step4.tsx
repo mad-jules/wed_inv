@@ -27,6 +27,7 @@ export default function Step4() {
             backgroundColor: "#ffdfea",
             borderRadius: 16,
             padding: 8,
+            fontSize: 11,
           }}
         >
           {/* <div className={styles["text-wrapper"]} style={{ top: "10%", backgroundImage:'none' }}> */}
@@ -90,8 +91,8 @@ export default function Step4() {
           alt="we"
           style={{
             width: "100dvw",
-            height: "auto",
-            objectFit: "contain",
+            height: "70%",
+            objectFit: "cover",
             objectPosition: "left",
           }}
           priority

@@ -16,7 +16,20 @@ export default function Step3() {
       />
       <div className={styles.overlay} />
 
-      <div className={styles.bubble} style={{ justifyContent: "end", gap: 0 }}>
+      <div
+        className={styles.bubble}
+        style={{
+          justifyContent: "end",
+          gap: 0,
+          flexDirection: "column-reverse",
+        }}
+      >
+        <Image
+          src={s3}
+          alt="we"
+          style={{ width: "100%", height: "60%", objectFit: "cover" }}
+          priority
+        />
         <div
           className={styles["text-wrapper"]}
           style={{
@@ -29,12 +42,6 @@ export default function Step3() {
             style={{ top: "50%" }}
           >{`Ми одружуємося! 💍`}</p>
         </div>
-        <Image
-          src={s3}
-          alt="we"
-          style={{ width: "100%", height: "auto", objectFit: "contain" }}
-          priority
-        />
         <Icon
           style={{
             position: "absolute",

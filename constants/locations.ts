@@ -10,7 +10,7 @@ export const locations: Location[] = [
     name: "РАЦС",
     lat: 50.5533067,
     lng: 30.2179522,
-    address: "м. Буча, вул. Енергетиків, 2",
+    address: "Буча, вул. Енергетиків, 2",
   },
   // {
   //   name: "Бістро Пекаря",
@@ -22,6 +22,6 @@ export const locations: Location[] = [
     name: "WorkIT",
     lat: 50.53544,
     lng: 30.15736,
-    address: "м. Ворзель, вул. Шевченка, 22, 24",
+    address: "Ворзель, вул. Шевченка, 22, 24",
   },
 ];

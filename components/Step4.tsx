@@ -7,6 +7,7 @@ import final from "../assets/final.png";
 import { useCountdown } from "@/hooks/useCountdown";
 import { WEDDING_DATE } from "@/constants/wedding";
 import { Icon, IconName } from "./Icon";
+import { addToCalendar } from "@/utils/calendar";
 
 export default function Step4() {
   const { days, hours, minutes, seconds } = useCountdown(WEDDING_DATE);
@@ -29,6 +30,7 @@ export default function Step4() {
             padding: 8,
             fontSize: 11,
           }}
+          onClick={addToCalendar}
         >
           {/* <div className={styles["text-wrapper"]} style={{ top: "10%", backgroundImage:'none' }}> */}
           <p
